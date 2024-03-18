@@ -1,0 +1,70 @@
+#server:
+#  port: 8080
+#
+#
+#spring:
+#  cache:
+#    type: redis
+#  redis:
+#    host: localhost
+#    port: 6379
+#  application:
+#    name: redisCache
+#  datasource:
+#    driverClassName: org.postgresql.Driver
+#    username: postgres
+#    url: jdbc:postgresql://localhost:5433/customers
+#    password: 1234
+#    hikari:
+#      maximumPoolSize: 5
+#  jpa:
+#    properties:
+#        format_sql: true
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#      dialect: org.hibernate.dialect.PostgreSQLDialect
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#
+#  pattern:
+#  level:
+#    org.hibernate.orm.jdbc.bind: trace
+#
+server:
+  port: 8080
+
+spring:
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 3000
+    password: xlOHcWShL0LBGAB6zO4f0ADl3Nl9x65X
+  session:
+    store-type: redis
+  application:
+    name: springSecurity3.0
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/customers
+    username: postgres
+    password: 1234
+    hikari:
+      maximumPoolSize: 5
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate.format_sql: true
+  pattern:
+    level:
+      org.hibernate.orm.jdbc.bind: trace
+
+
+
+  mvc:
+    contentnegotiation:
+      defaultContentType: application/json
